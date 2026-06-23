@@ -33,16 +33,20 @@ This project simulates real-world Data Science responsibilities, where business 
 Through these analyses, I supported decision-making processes by transforming raw agricultural data into actionable insights. The project strengthened my ability to work with relational databases, write complex SQL queries, perform data validation, identify trends and anomalies, and communicate results to business stakeholders. This experience reflects the day-to-day responsibilities of a Data Scientist working with real-world agricultural production data at the USDA.
 
 # Query 1 
+<div></div>
 
-<img width="406" height="142" alt="111" align ='center' src="https://github.com/user-attachments/assets/b0de29af-3933-4b45-962b-1dff46dfb01a" />
-
+<div>
+  <img width="406" height="142" alt="111" align ='left' src="https://github.com/user-attachments/assets/b0de29af-3933-4b45-962b-1dff46dfb01a" />
+</div>
+  
 <div class="galeria-linha" align ='left'>
-<img width="500" height="898" alt="ad_page-0001" src="https://github.com/user-attachments/assets/17c940ef-c458-448e-8009-f3f8f71de8c2" />
+<img width="500" height="900" alt="ad_page-0001" src="https://github.com/user-attachments/assets/17c940ef-c458-448e-8009-f3f8f71de8c2" />
 <img width="500" height="900" alt="ad_page-0002" src="https://github.com/user-attachments/assets/ab1c3147-3b53-4a24-add1-d7ddad612699" />
 <img width="500" height="900" alt="ad_page-0003" src="https://github.com/user-attachments/assets/9ec96ed4-21ff-45d0-8c78-38d795d9754b" />
 <img width="500" height="900" alt="ad_page-0004" src="https://github.com/user-attachments/assets/cb0d09fd-3233-4deb-812c-a04eb9d918d4" />
   </div>
-
+  
+ </div>
 
 # Query 2
 
@@ -52,13 +56,17 @@ Through these analyses, I supported decision-making processes by transforming ra
 
 # Query 3
 
-<img width="355" height="129" alt="333" align = 'center' src="https://github.com/user-attachments/assets/936ebcee-ab40-4e53-9456-d2bbc77b9890" />
+<div>
+<div>
+<img width="355" height="129" alt="333" align = 'left' src="https://github.com/user-attachments/assets/936ebcee-ab40-4e53-9456-d2bbc77b9890" />
+ </div>
 
 <div class="galeria-linha" align ='left'>
 <img width="500" height="898" alt="addd_page-0001" src="https://github.com/user-attachments/assets/803ed876-bb5b-434e-bc5a-7ded7c953d97" />
 <img width="500" height="900" alt="addd_page-0002" src="https://github.com/user-attachments/assets/b46518fa-5f43-4980-a39d-eb22160a3797" />
 <img width="500" height="900" alt="addd_page-0003" src="https://github.com/user-attachments/assets/2918dc8c-27a7-4d06-925c-0f9d0359b80c" />
   </div>
+ </div>
 
 
 # Query 4
@@ -71,7 +79,7 @@ Through these analyses, I supported decision-making processes by transforming ra
 # Query 5
 
   <div>
-<img width="164" height="63" alt="Captura de tela 2026-06-11 192655" align = 'center' src="https://github.com/user-attachments/assets/958164d4-7b10-4767-970c-c3d1df8a45cb" />
+<img width="164" height="63" alt="Captura de tela 2026-06-11 192655" align = 'left' src="https://github.com/user-attachments/assets/958164d4-7b10-4767-970c-c3d1df8a45cb" />
   </div>
 
 
