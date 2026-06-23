@@ -36,8 +36,10 @@ Through these analyses, I supported decision-making processes by transforming ra
 <div></div>
 
 <div>
-  <img width="406" height="142" alt="111" align ='left' src="https://github.com/user-attachments/assets/b0de29af-3933-4b45-962b-1dff46dfb01a" />
+  <img width="406" height="142" alt="111" align ='center' src="https://github.com/user-attachments/assets/b0de29af-3933-4b45-962b-1dff46dfb01a" />
 </div>
+
+#
   
 <div class="galeria-linha" align ='left'>
 <img width="500" height="900" alt="ad_page-0001" src="https://github.com/user-attachments/assets/17c940ef-c458-448e-8009-f3f8f71de8c2" />
@@ -50,16 +52,18 @@ Through these analyses, I supported decision-making processes by transforming ra
 
 # Query 2
 
-<img width="609" height="239" alt="222" align = 'left' src="https://github.com/user-attachments/assets/74335467-670e-4300-a3a9-7dc98f25213e" />
-<img width="337" height="360" alt="2222" src="https://github.com/user-attachments/assets/6b99aa8d-4913-4c69-aa1f-8f65416a0d87" />
+<img width="609" height="239" alt="222" align = 'center' src="https://github.com/user-attachments/assets/74335467-670e-4300-a3a9-7dc98f25213e" />
+<img width="337" height="360" alt="222" align = 'center' src="https://github.com/user-attachments/assets/6b99aa8d-4913-4c69-aa1f-8f65416a0d87" />
 
 
 # Query 3
 
 <div>
 <div>
-<img width="355" height="129" alt="333" align = 'left' src="https://github.com/user-attachments/assets/936ebcee-ab40-4e53-9456-d2bbc77b9890" />
+<img width="355" height="129" alt="333" align = 'center' src="https://github.com/user-attachments/assets/936ebcee-ab40-4e53-9456-d2bbc77b9890" />
  </div>
+  
+#
 
 <div class="galeria-linha" align ='left'>
 <img width="500" height="898" alt="addd_page-0001" src="https://github.com/user-attachments/assets/803ed876-bb5b-434e-bc5a-7ded7c953d97" />
@@ -71,17 +75,25 @@ Through these analyses, I supported decision-making processes by transforming ra
 
 # Query 4
 
-<img width="378" height="126" alt="4444" align = "left"
-  src="https://github.com/user-attachments/assets/c89d358a-e1f6-413d-8ea8-7d4114f1789f" />
-<img width="253" height="471" alt="44444" src="https://github.com/user-attachments/assets/32ebedac-bbb8-467e-9a1a-8b76f56579b6" />
+<div>
+<div>
+<img width="378" height="126" alt="4444" align = "center" src="https://github.com/user-attachments/assets/c89d358a-e1f6-413d-8ea8-7d4114f1789f" />  </div>
+
+#
+
+<div class="galeria-linha1" align ='left'>
+<img width="253" height="471" alt="44442224" src="https://github.com/user-attachments/assets/32ebedac-bbb8-467e-9a1a-8b76f56579b6" />
 <img width="273" height="472" alt="444444" src="https://github.com/user-attachments/assets/f531c297-8aa1-40bf-8142-92d54e9cdc95" />
+   </div>
+ </div>
 
 # Query 5
 
   <div>
-<img width="164" height="63" alt="Captura de tela 2026-06-11 192655" align = 'left' src="https://github.com/user-attachments/assets/958164d4-7b10-4767-970c-c3d1df8a45cb" />
+<img width="164" height="63" alt="Captura de tela 2026-06-11 192655" align = 'center' src="https://github.com/user-attachments/assets/958164d4-7b10-4767-970c-c3d1df8a45cb" />
   </div>
-
+  
+##
 
 <div class="galeria-linha" align ='left'>
   <img width="292" height="448" alt="Captura de tela 2026-06-11 192533" src="https://github.com/user-attachments/assets/b8b21ba7-7a87-46ae-a432-f698eb58acfd" />
@@ -93,7 +105,10 @@ Through these analyses, I supported decision-making processes by transforming ra
   
 # Query 6
 
-<img width="578" height="217" alt="Captura de tela 2026-06-11 193035" align = 'left' src="https://github.com/user-attachments/assets/7c73f1db-a20c-4209-9a72-8fb400eaba91" />
+<img width="578" height="217" alt="Captura de tela 2026-06-11 193035" align = 'center' src="https://github.com/user-attachments/assets/7c73f1db-a20c-4209-9a72-8fb400eaba91" />
+
+#
+
 <img width="328" height="353" alt="Captura de tela 2026-06-11 193050" src="https://github.com/user-attachments/assets/35f50c6f-8f06-4694-af28-88ea9606809d" />
 
 # Query 7
