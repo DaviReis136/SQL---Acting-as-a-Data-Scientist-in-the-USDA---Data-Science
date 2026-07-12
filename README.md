@@ -154,7 +154,7 @@ This project simulates <ins>real-world Data Science responsibilities</ins>, wher
 
 <img width="940" height="460" alt="Function_to_Update_DataBase" src="https://github.com/user-attachments/assets/205ce7cd-bf80-4cae-b47a-c80b37744326" />
 
-I used this function to remove commas to perform calculations from the database.
++ I used this function to remove commas to perform calculations from the database.
 
 ## *DataBase*
 
