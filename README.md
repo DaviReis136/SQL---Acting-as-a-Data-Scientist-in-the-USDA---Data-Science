@@ -1,8 +1,8 @@
 # **__Capstone Project – Acting as a Data Scientist at the USDA__**
 
-In this Capstone Project, I assume the role of a Data Scientist at the`USDA (United States Department of Agriculture)`. My responsibility is to analyze agricultural production data and provide insights that support decision-making across multiple departments.
+In this Capstone Project, I assume the role of a Data Scientist at the`USDA (United States Department of Agriculture)`. My responsibility is to <ins>analyze agricultural production data</ins> and <ins>provide insights that support decision-making</ins> across multiple departments.
 
-The USDA maintains several datasets, including milk production, cheese production, coffee production, honey production, yogurt production, and a state reference table containing state names and ANSI codes. Using SQL, I answer business questions from managers and stakeholders by extracting, analyzing, and interpreting data.
+The USDA maintains several datasets, including milk production, cheese production, coffee production, honey production, yogurt production, and a state reference table containing state names and ANSI codes. Using <ins>SQL</ins>, I answer business questions from managers and stakeholders by <ins>extracting, analyzing, and interpreting data</ins>.
 
 Throughout this project, I received the following requests:
 
@@ -26,11 +26,11 @@ Throughout this project, I received the following requests:
 
 > 10. Determine the average coffee production for all years in which honey production exceeded one million units, supporting comparative analysis between agricultural commodities.
 
-To complete these requests, I used SQL techniques including filtering with WHERE clauses, aggregate functions such as SUM and AVG, GROUP BY operations, subqueries, and JOINs. These analyses allowed me to transform raw agricultural data into actionable insights that support reporting, strategic planning, and operational decision-making within the USDA.
+<ins>To complete these requests:</ins>, I used SQL techniques including filtering with WHERE clauses, aggregate functions such as SUM and AVG, GROUP BY operations, subqueries, and JOINs. These analyses allowed me to transform raw agricultural data into actionable insights that support reporting, strategic planning, and operational decision-making within the USDA.
 
-This project simulates real-world Data Science responsibilities, where business stakeholders frequently request specific analyses and expect accurate, data-driven answers to support organizational goals.
+This project simulates <ins>real-world Data Science responsibilities</ins>, where business stakeholders frequently request specific analyses and expect accurate, data-driven answers to support organizational goals.
 
-Through these analyses, I supported decision-making processes by transforming raw agricultural data into actionable insights. The project strengthened my ability to work with relational databases, write complex SQL queries, perform data validation, identify trends and anomalies, and communicate results to business stakeholders. This experience reflects the day-to-day responsibilities of a Data Scientist working with real-world agricultural production data at the USDA.
+<ins>Through these analyses, I supported decision-making processes by transforming raw agricultural data into actionable insights. The project strengthened my ability to work with relational databases, write complex SQL queries, perform data validation, identify trends and anomalies, and communicate results to business stakeholders. This experience reflects the day-to-day responsibilities of a Data Scientist working with real-world agricultural production data at the USDA.</ins>
 
 ## *Query 1* 
 <div></div>
