@@ -206,6 +206,8 @@ FROM coffee
 GROUP BY Year
 
 ```
+
+```
 </SQL>
 
 Output:
