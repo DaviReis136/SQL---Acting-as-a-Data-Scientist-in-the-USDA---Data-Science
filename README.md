@@ -33,122 +33,590 @@ This project simulates <ins>real-world Data Science responsibilities</ins>, wher
 <ins>Through these analyses, I supported decision-making processes by transforming raw agricultural data into actionable insights. The project strengthened my ability to work with relational databases, write complex SQL queries, perform data validation, identify trends and anomalies, and communicate results to business stakeholders. This experience reflects the day-to-day responsibilities of a Data Scientist working with real-world agricultural production data at the USDA.</ins>
 
 ## *Query 1* 
-<div></div>
 
-<div>
-  <img width="406" height="142" alt="111" align ='center' src="https://github.com/user-attachments/assets/b0de29af-3933-4b45-962b-1dff46dfb01a" />
-</div>
+```
+</SQL>
 
-##
-  
-<div class="galeria-linha" align ='left'>
-<img width="500" height="900" alt="ad_page-0001" src="https://github.com/user-attachments/assets/17c940ef-c458-448e-8009-f3f8f71de8c2" />
-<img width="500" height="900" alt="ad_page-0002" src="https://github.com/user-attachments/assets/ab1c3147-3b53-4a24-add1-d7ddad612699" />
-<img width="500" height="900" alt="ad_page-0003" src="https://github.com/user-attachments/assets/9ec96ed4-21ff-45d0-8c78-38d795d9754b" />
-<img width="500" height="900" alt="ad_page-0004" src="https://github.com/user-attachments/assets/cb0d09fd-3233-4deb-812c-a04eb9d918d4" />
-  </div>
-  
- </div>
+SELECT Year,
+       Sum(Value) AS Total
+FROM Milk
+GROUP BY Year
+ORDER BY Year DESC
+```      
+
+```
+</SQL>
+
+Output:
+
+|  Nº | Year |  Total |
+| --: | ---: | -----: |
+|   1 | 1924 |  12365 |
+|   2 | 1925 |  12480 |
+|   3 | 1926 |  10804 |
+|   4 | 1927 |   8996 |
+|   5 | 1928 |   9059 |
+|   6 | 1929 |   9294 |
+|   7 | 1930 |  50614 |
+|   8 | 1931 |  58030 |
+|   9 | 1932 |  70432 |
+|  10 | 1933 |  77335 |
+|  11 | 1934 |  75579 |
+|  12 | 1935 |  80844 |
+|  13 | 1936 |  83476 |
+|  14 | 1937 |  83543 |
+|  15 | 1938 |  86743 |
+|  16 | 1939 |  87336 |
+|  17 | 1940 |  88008 |
+|  18 | 1941 |  89418 |
+|  19 | 1942 |  90987 |
+|  20 | 1943 |  89397 |
+|  21 | 1944 |  91308 |
+|  22 | 1945 |  90460 |
+|  23 | 1946 |  89411 |
+|  24 | 1947 |  90774 |
+|  25 | 1948 |  89047 |
+|  26 | 1949 |  89859 |
+|  27 | 1950 |  91323 |
+|  28 | 1951 |  89493 |
+|  29 | 1952 |  86977 |
+|  30 | 1953 |  90090 |
+|  31 | 1954 |  91438 |
+|  32 | 1955 |  90987 |
+|  33 | 1956 |  91030 |
+|  34 | 1957 |  90238 |
+|  35 | 1958 |  86550 |
+|  36 | 1959 |  87721 |
+|  37 | 1960 | 110313 |
+|  38 | 1961 | 111613 |
+|  39 | 1962 | 111320 |
+|  40 | 1963 | 111065 |
+|  41 | 1964 | 109648 |
+|  42 | 1965 | 105320 |
+|  43 | 1966 | 107197 |
+|  44 | 1967 | 106698 |
+|  45 | 1968 | 106030 |
+|  46 | 1969 | 108082 |
+|  47 | 1970 | 108557 |
+|  48 | 1971 | 108812 |
+|  49 | 1972 | 106199 |
+|  50 | 1973 | 101345 |
+|  51 | 1974 | 102068 |
+|  52 | 1975 | 100984 |
+|  53 | 1976 |  99189 |
+|  54 | 1977 |  97842 |
+|  55 | 1978 |  98552 |
+|  56 | 1979 |  94005 |
+|  57 | 1980 |  93831 |
+|  58 | 1981 |  96939 |
+|  59 | 1982 |  31910 |
+|  60 | 1983 |  95293 |
+|  61 | 1984 |  94834 |
+|  62 | 1985 |  96597 |
+|  63 | 1986 |  81173 |
+|  64 | 1987 |  85124 |
+|  65 | 1988 |  84203 |
+|  66 | 1989 |  84087 |
+|  67 | 1990 |  87310 |
+|  68 | 1991 |  85901 |
+|  69 | 1992 |  88779 |
+|  70 | 1993 |  88105 |
+|  71 | 1994 |  89072 |
+|  72 | 1995 |  89273 |
+|  73 | 1996 |  88420 |
+|  74 | 1997 |  88773 |
+|  75 | 1998 |  87609 |
+|  76 | 1999 |  85366 |
+|  77 | 2000 |  87685 |
+|  78 | 2001 |  91021 |
+|  79 | 2002 |  86855 |
+|  80 | 2003 |  96391 |
+|  81 | 2004 | 101478 |
+|  82 | 2005 |  98435 |
+|  83 | 2006 | 103410 |
+|  84 | 2007 | 101837 |
+|  85 | 2008 |  99156 |
+|  86 | 2009 |  97248 |
+|  87 | 2010 |  96510 |
+|  88 | 2011 |  99272 |
+|  89 | 2012 |  99325 |
+|  90 | 2013 | 101979 |
+|  91 | 2014 | 103396 |
+|  92 | 2015 | 105149 |
+|  93 | 2016 | 107163 |
+|  94 | 2017 | 103320 |
+|  95 | 2018 | 101320 |
+|  96 | 2019 | 100435 |
+|  97 | 2020 | 102613 |
+|  98 | 2021 |  95890 |
+|  99 | 2022 | 100845 |
+| 100 | 2023 |  35947 |
+
+```
 
 ##  *Query 2*
 
-<img width="609" height="239" alt="222" align = 'center' src="https://github.com/user-attachments/assets/74335467-670e-4300-a3a9-7dc98f25213e" />
+```
+</SQL>
 
-##
+SELECT st.State,
+       v.Value,
+       Period
+FROM Cheese v
+     LEFT JOIN State st ON v.State_ANSI = st.State_ANSI
+WHERE Value > 100000000 AND
+      Year = "2023" AND
+      Period = "APR"
 
-<img width="337" height="360" alt="222" align = 'center' src="https://github.com/user-attachments/assets/6b99aa8d-4913-4c69-aa1f-8f65416a0d87" />
+```
 
+```
+</SQL>
+
+Output:
+
+| Nº | State        |       Value | Period |
+| -: | ------------ | ----------: | :----: |
+|  1 | CALIFORNIA   | 208,807,000 |   APR  |
+|  2 | IDAHO        |  86,452,000 |   APR  |
+|  3 | ILLINOIS     |   5,068,000 |   APR  |
+|  4 | IOWA         |  31,512,000 |   APR  |
+|  5 | MINNESOTA    |  69,728,000 |   APR  |
+|  6 | NEW JERSEY   |   4,889,000 |   APR  |
+|  7 | NEW MEXICO   |  79,038,000 |   APR  |
+|  8 | NEW YORK     |  66,256,000 |   APR  |
+|  9 | OHIO         |  20,510,000 |   APR  |
+| 10 | NULL         | 215,206,000 |   APR  |
+| 11 | PENNSYLVANIA |  39,420,000 |   APR  |
+| 12 | SOUTH DAKOTA |  43,253,000 |   APR  |
+| 13 | VERMONT      |  11,279,000 |   APR  |
+| 14 | WISCONSIN    | 289,699,000 |   APR  |
+
+```
 
 ##  *Query 3*
 
-<div>
-<div>
-<img width="355" height="129" alt="333" align = 'center' src="https://github.com/user-attachments/assets/936ebcee-ab40-4e53-9456-d2bbc77b9890" />
- </div>
-  
-##
 
-<div class="galeria-linha" align ='left'>
-<img width="500" height="898" alt="addd_page-0001" src="https://github.com/user-attachments/assets/803ed876-bb5b-434e-bc5a-7ded7c953d97" />
-<img width="500" height="900" alt="addd_page-0002" src="https://github.com/user-attachments/assets/b46518fa-5f43-4980-a39d-eb22160a3797" />
-<img width="500" height="900" alt="addd_page-0003" src="https://github.com/user-attachments/assets/2918dc8c-27a7-4d06-925c-0f9d0359b80c" />
-  </div>
- </div>
+```
+</SQL>
+SELECT DISTINCT State_ANSI 
+FROM Cheese 
+WHERE State_ANSI NOT IN (SELECT State_ANSI FROM State)
+```
 
+```
+</SQL>
+
+Output:
+
+| Nº | Year | Total |
+| -: | ---: | ----: |
+|  1 | 1946 |     8 |
+|  2 | 1947 |     8 |
+|  3 | 1948 |     7 |
+|  4 | 1949 |     5 |
+|  5 | 1950 |     9 |
+|  6 | 1951 |     9 |
+|  7 | 1952 |    10 |
+|  8 | 1953 |    10 |
+|  9 | 1954 |    12 |
+| 10 | 1955 |    10 |
+| 11 | 1956 |    11 |
+| 12 | 1957 |    18 |
+| 13 | 1958 |    10 |
+| 14 | 1959 |    12 |
+| 15 | 1960 |    13 |
+| 16 | 1961 |     8 |
+| 17 | 1962 |    13 |
+| 18 | 1963 |     6 |
+| 19 | 1964 |     9 |
+| 20 | 1965 |     7 |
+| 21 | 1966 |     8 |
+| 22 | 1967 |     5 |
+| 23 | 1968 |     5 |
+| 24 | 1969 |     4 |
+| 25 | 1970 |     4 |
+| 26 | 1971 |     2 |
+| 27 | 1972 |     3 |
+| 28 | 1973 |     3 |
+| 29 | 1974 |     1 |
+| 30 | 1975 |     1 |
+| 31 | 1976 |     2 |
+| 32 | 1977 |     2 |
+| 33 | 1978 |     1 |
+| 34 | 1979 |     2 |
+| 35 | 1980 |     1 |
+| 36 | 1981 |     2 |
+| 37 | 1982 |    10 |
+| 38 | 1983 |     2 |
+| 39 | 1984 |     1 |
+| 40 | 1985 |     1 |
+| 41 | 1986 |     3 |
+| 42 | 1987 |     1 |
+| 43 | 1988 |     2 |
+| 44 | 1989 |     3 |
+| 45 | 1990 |     2 |
+| 46 | 1991 |     2 |
+| 47 | 1992 |     2 |
+| 48 | 1993 |     2 |
+| 49 | 1994 |     4 |
+| 50 | 1995 |     5 |
+| 51 | 1996 |     6 |
+| 52 | 1997 |     9 |
+| 53 | 1998 |     9 |
+| 54 | 1999 |    10 |
+| 55 | 2000 |     8 |
+| 56 | 2001 |     8 |
+| 57 | 2002 |     7 |
+| 58 | 2003 |     8 |
+| 59 | 2004 |     5 |
+| 60 |      |       |
+```
 
 ##  *Query 4* 
 
-<div>
-<div>
-<img width="378" height="126" alt="4444" align = "center" src="https://github.com/user-attachments/assets/c89d358a-e1f6-413d-8ea8-7d4114f1789f" />  </div>
+```
+</SQL>
 
-##
+SELECT Year,
+       ROUND(AVG(Value), 2) AS Average
+FROM honey
+GROUP BY Year
 
-<div class="galeria-linha1" align ='left'>
-<img width="253" height="471" alt="44442224" src="https://github.com/user-attachments/assets/32ebedac-bbb8-467e-9a1a-8b76f56579b6" />
-<img width="273" height="472" alt="444444" src="https://github.com/user-attachments/assets/f531c297-8aa1-40bf-8142-92d54e9cdc95" />
-   </div>
- </div>
+```
 
-## *Query 5* 
-  <div>
-<img width="164" height="63" alt="Captura de tela 2026-06-11 192655" align = 'center' src="https://github.com/user-attachments/assets/958164d4-7b10-4767-970c-c3d1df8a45cb" />
-  </div>
-  
-##
+```
+</SQL>
 
-<div class="galeria-linha" align ='left'>
-  <img width="292" height="448" alt="Captura de tela 2026-06-11 192533" src="https://github.com/user-attachments/assets/b8b21ba7-7a87-46ae-a432-f698eb58acfd" />
-<img width="281" height="449" alt="Captura de tela 2026-06-11 192601" src="https://github.com/user-attachments/assets/34be6107-9095-47f7-9563-91a2b14c7bae" />
-<img width="297" height="450" alt="Captura de tela 2026-06-11 192636" src="https://github.com/user-attachments/assets/bfc84fc0-9920-46fe-bc07-80ce642a25eb" />
-    </div>
+Output:
+
+| Nº | Year | Average |
+| -: | ---: | ------: |
+|  1 | 1987 |  143.43 |
+|  2 | 1988 |  108.45 |
+|  3 | 1989 |  176.67 |
+|  4 | 1990 |  146.16 |
+|  5 | 1991 |  144.09 |
+|  6 | 1992 |  145.76 |
+|  7 | 1993 |  209.27 |
+|  8 | 1994 |  202.33 |
+|  9 | 1995 |  171.82 |
+| 10 | 1996 |  191.24 |
+| 11 | 1997 |  168.07 |
+| 12 | 1998 |  181.14 |
+| 13 | 1999 |  184.18 |
+| 14 | 2000 |  193.55 |
+| 15 | 2001 |  198.44 |
+| 16 | 2002 |  223.80 |
+| 17 | 2003 |  183.64 |
+| 18 | 2004 |  187.50 |
+| 19 | 2005 |  197.86 |
+| 20 | 2006 |  217.71 |
+| 21 | 2007 |  212.83 |
+| 22 | 2008 |  204.48 |
+| 23 | 2009 |  202.66 |
+| 24 | 2010 |  176.51 |
+| 25 | 2011 |  180.02 |
+| 26 | 2012 |  182.80 |
+| 27 | 2013 |  136.70 |
+| 28 | 2014 |  216.80 |
+| 29 | 2015 |  177.73 |
+| 30 | 2016 |  179.88 |
+| 31 | 2017 |  133.95 |
+| 32 | 2018 |  165.49 |
+| 33 | 2019 |  185.83 |
+| 34 | 2020 |  226.68 |
+| 35 | 2021 |  175.56 |
+| 36 | 2022 |  140.25 |
+
+```
+
+## *Query 5*
+
+```
+</SQL>
+
+SELECT *
+FROM State
+
+```
+
+```
+</SQL>
+
+Output:
+
+| Nº | State          | State_ANSI |
+| -: | -------------- | ---------: |
+|  1 | ALABAMA        |          1 |
+|  2 | ALASKA         |          2 |
+|  3 | ARIZONA        |          4 |
+|  4 | ARKANSAS       |          5 |
+|  5 | CALIFORNIA     |          6 |
+|  6 | COLORADO       |          8 |
+|  7 | CONNECTICUT    |          9 |
+|  8 | DELAWARE       |         10 |
+|  9 | FLORIDA        |         12 |
+| 10 | GEORGIA        |         13 |
+| 11 | HAWAII         |         15 |
+| 12 | IDAHO          |         16 |
+| 13 | ILLINOIS       |         17 |
+| 14 | INDIANA        |         18 |
+| 15 | IOWA           |         19 |
+| 16 | KANSAS         |         20 |
+| 17 | KENTUCKY       |         21 |
+| 18 | LOUISIANA      |         22 |
+| 19 | MAINE          |         23 |
+| 20 | MARYLAND       |         24 |
+| 21 | MASSACHUSETTS  |         25 |
+| 22 | MICHIGAN       |         26 |
+| 23 | MINNESOTA      |         27 |
+| 24 | MISSISSIPPI    |         28 |
+| 25 | MISSOURI       |         29 |
+| 26 | MONTANA        |         30 |
+| 27 | NEBRASKA       |         31 |
+| 28 | NEVADA         |         32 |
+| 29 | NEW HAMPSHIRE  |         33 |
+| 30 | NEW JERSEY     |         34 |
+| 31 | NEW MEXICO     |         35 |
+| 32 | NEW YORK       |         36 |
+| 33 | NORTH CAROLINA |         37 |
+| 34 | NORTH DAKOTA   |         38 |
+| 35 | OHIO           |         39 |
+| 36 | OKLAHOMA       |         40 |
+| 37 | OREGON         |         41 |
+| 38 | PENNSYLVANIA   |         42 |
+| 39 | RHODE ISLAND   |         44 |
+| 40 | SOUTH CAROLINA |         45 |
+| 41 | SOUTH DAKOTA   |         46 |
+| 42 | TENNESSEE      |         47 |
+| 43 | TEXAS          |         48 |
+| 44 | UTAH           |         49 |
+| 45 | VERMONT        |         50 |
+| 46 | VIRGINIA       |         51 |
+| 47 | WASHINGTON     |         53 |
+| 48 | WEST VIRGINIA  |         54 |
+| 49 | WISCONSIN      |         55 |
+| 50 | WYOMING        |         56 |
+
+```
+
+## *Query 6*
+
+```
+</SQL>
+
+SELECT st.State,
+       v.Value,
+       Period
+FROM Cheese v
+     LEFT JOIN State st ON v.State_ANSI = st.State_ANSI
+WHERE Year = "2023" AND
+      Period = "APR"
+
+```
+
+```
+</SQL>
+
+Output:
+
+| Nº | State        |       Value | Period |
+| -: | ------------ | ----------: | :----: |
+|  1 | CALIFORNIA   | 208,807,000 |   APR  |
+|  2 | IDAHO        |  86,452,000 |   APR  |
+|  3 | ILLINOIS     |   5,068,000 |   APR  |
+|  4 | IOWA         |  31,512,000 |   APR  |
+|  5 | MINNESOTA    |  69,728,000 |   APR  |
+|  6 | NEW JERSEY   |   4,889,000 |   APR  |
+|  7 | NEW MEXICO   |  79,038,000 |   APR  |
+|  8 | NEW YORK     |  66,256,000 |   APR  |
+|  9 | OHIO         |  20,510,000 |   APR  |
+| 10 | NULL         | 215,206,000 |   APR  |
+| 11 | PENNSYLVANIA |  39,420,000 |   APR  |
+| 12 | SOUTH DAKOTA |  43,253,000 |   APR  |
+| 13 | VERMONT      |  11,279,000 |   APR  |
+| 14 | WISCONSIN    | 289,699,000 |   APR  |
+
+```
+
+## *Query 7*
+
+```
+</SQL>
+
+SELECT yougurt.Value AS yougurt_Value,
+       cheese.Value AS cheese_Value,
+       yougurt.State_ANSI AS yougurt_State_ANSI,
+       cheese.State_ANSI AS cheese_State_ANSI,
+       yougurt.Year AS yougurt_Year,
+       cheese.Year AS cheese_Year,
+       (
+           SELECT yougurt.Value
+           FROM yougurt,
+                cheese
+           WHERE cheese.State_ANSI = yougurt.State_ANSI AND
+                 yougurt.Year = '2022' AND
+                 cheese.Year = '2023'
+       ) AS invoicing
+FROM yougurt,
+     cheese
+WHERE cheese.State_ANSI = yougurt.State_ANSI AND
+      yougurt.Year = '2022' AND
+      cheese.Year = '2023'
+
+```
+
+```
+</SQL>
+
+Output:
+
+Aqui está a tabela organizada:
+
+| Nº | Yogurt_Value | Cheese_Value | Yogurt_State_ANSI | Cheese_State_ANSI | Yogurt_Year | Cheese_Year |   Invoicing |
+| -: | -----------: | -----------: | ----------------: | ----------------: | ----------: | ----------: | ----------: |
+|  1 |  377,839,000 |  201,881,000 |                 6 |                 6 |        2022 |        2023 | 377,839,000 |
+|  2 |  377,839,000 |  203,976,000 |                 6 |                 6 |        2022 |        2023 | 377,839,000 |
+|  3 |  377,839,000 |  208,807,000 |                 6 |                 6 |        2022 |        2023 | 377,839,000 |
+|  4 |  377,839,000 |  219,163,000 |                 6 |                 6 |        2022 |        2023 | 377,839,000 |
+|  5 |  793,256,000 |   66,098,000 |                36 |                36 |        2022 |        2023 | 377,839,000 |
+|  6 |  793,256,000 |   66,256,000 |                36 |                36 |        2022 |        2023 | 377,839,000 |
+|  7 |  793,256,000 |   71,829,000 |                36 |                36 |        2022 |        2023 | 377,839,000 |
+|  8 |  793,256,000 |   75,343,000 |                36 |                36 |        2022 |        2023 | 377,839,000 |
+
+```
+
+## *Query 8*
+
+```
+</SQL>
+
+SELECT sl.state,
+       (
+           SELECT (Count(State) - 26)
+           FROM State
+       ) AS States_That_Do_Not_Have_Records_2023_MILK
+FROM state sl
+     LEFT JOIN milk mp ON sl.state_ansi = mp.state_ansi AND
+                          mp.year = 2023
+WHERE mp.state_ansi IS NULL
+
+```
+
+```
+</SQL>
+
+Output:
+
+| Nº | State          | States_That_Do_Not_Have_Records_2023_MILK |
+| -: | -------------- | ----------------------------------------: |
+|  1 | ALABAMA        |                                        24 |
+|  2 | ALASKA         |                                        24 |
+|  3 | ARKANSAS       |                                        24 |
+|  4 | CONNECTICUT    |                                        24 |
+|  5 | DELAWARE       |                                        24 |
+|  6 | HAWAII         |                                        24 |
+|  7 | KENTUCKY       |                                        24 |
+|  8 | LOUISIANA      |                                        24 |
+|  9 | MAINE          |                                        24 |
+| 10 | MARYLAND       |                                        24 |
+| 11 | MASSACHUSETTS  |                                        24 |
+| 12 | MISSISSIPPI    |                                        24 |
+| 13 | MISSOURI       |                                        24 |
+| 14 | MONTANA        |                                        24 |
+| 15 | NEBRASKA       |                                        24 |
+| 16 | NEVADA         |                                        24 |
+| 17 | NEW HAMPSHIRE  |                                        24 |
+| 18 | NEW JERSEY     |                                        24 |
+| 19 | NORTH CAROLINA |                                        24 |
+| 20 | NORTH DAKOTA   |                                        24 |
+| 21 | OKLAHOMA       |                                        24 |
+| 22 | RHODE ISLAND   |                                        24 |
+| 23 | SOUTH CAROLINA |                                        24 |
+| 24 | TENNESSEE      |                                        24 |
+| 25 | WEST VIRGINIA  |                                        24 |
+|  2 | WYOMING        |                                        24 |
 
 
-  
-## *Query 6* 
+```
 
-<img width="578" height="217" alt="Captura de tela 2026-06-11 193035" align = 'center' src="https://github.com/user-attachments/assets/7c73f1db-a20c-4209-9a72-8fb400eaba91" />
+## *Query 9*
 
-##
+```
+</SQL>
 
-<img width="328" height="353" alt="Captura de tela 2026-06-11 193050" src="https://github.com/user-attachments/assets/35f50c6f-8f06-4694-af28-88ea9606809d" />
+SELECT st.State,
+       v.Value,
+       CASE
+           WHEN Period = 'APR' THEN 'APR'
+           ELSE NULL
+       END AS APR,
+       CASE
+           WHEN Year = '2023' THEN '2023'
+           ELSE NULL
+       END AS Year,
+       CASE
+           WHEN Year = '2023' AND
+                Period = 'APR' THEN 'Valid'
+           ELSE 'Invalid'
+       END Valitor
+FROM Cheese v
+     LEFT JOIN State st ON v.State_ANSI = st.State_ANSI
+GROUP BY State
 
-## *Query 7* 
+```
 
-<img width="705" height="464" alt="Captura de tela 2026-06-11 193243" src="https://github.com/user-attachments/assets/e5108449-4daf-4c6f-baf2-9a86a5c08e16" />
+```
+</SQL>
 
-##
+Output:
 
-<img width="969" height="210" alt="Captura de tela 2026-06-11 193338" src="https://github.com/user-attachments/assets/991a3962-5bb7-4dea-887f-e45ce84e0ed1" />
+| Nº | State         |       Value | Period | Year | Validator |
+| -: | ------------- | ----------: | :----: | ---: | :-------- |
+|  1 | NULL          | 215,206,000 |   APR  | 2023 | Valid     |
+|  2 | ALABAMA       |   2,118,000 |  NULL  | NULL | Invalid   |
+|  3 | ARKANSAS      |  23,166,000 |  NULL  | NULL | Invalid   |
+|  4 | CALIFORNIA    | 208,807,000 |   APR  | 2023 | Valid     |
+|  5 | COLORADO      |   3,550,000 |   APR  | NULL | Invalid   |
+|  6 | CONNECTICUT   |   5,213,000 |  NULL  | NULL | Invalid   |
+|  7 | IDAHO         |  86,452,000 |   APR  | 2023 | Valid     |
+|  8 | ILLINOIS      |   5,068,000 |   APR  | 2023 | Valid     |
+|  9 | INDIANA       |  27,183,000 |  NULL  | NULL | Invalid   |
+| 10 | IOWA          |  31,512,000 |   APR  | 2023 | Valid     |
+| 11 | KANSAS        |   2,937,000 |   APR  | NULL | Invalid   |
+| 12 | KENTUCKY      |   3,135,000 |   APR  | NULL | Invalid   |
+| 13 | LOUISIANA     |   6,325,000 |  NULL  | NULL | Invalid   |
+| 14 | MASSACHUSETTS |      93,000 |   APR  | NULL | Invalid   |
+| 15 | MICHIGAN      |   8,835,000 |   APR  | NULL | Invalid   |
+| 16 | MINNESOTA     |  69,728,000 |   APR  | 2023 | Valid     |
+| 17 | MISSISSIPPI   |     874,000 |   APR  | NULL | Invalid   |
+| 18 | MISSOURI      |   8,645,000 |   APR  | NULL | Invalid   |
+| 19 | MONTANA       |   1,844,000 |  NULL  | NULL | Invalid   |
 
-## *Query 8* 
+```
 
-<img width="643" height="274" alt="888" src="https://github.com/user-attachments/assets/73d7eed5-dbdf-4392-8993-27f8b98f2e2d" />
+## *Query 10*
 
-##
+```
+</SQL>
 
-<img width="606" height="455" alt="Captura de tela 2026-06-11 193555" src="https://github.com/user-attachments/assets/357a9c6a-0618-43ba-9b82-f05d32a85f06" />
-<img width="630" height="464" alt="Captura de tela 2026-06-11 193614" src="https://github.com/user-attachments/assets/4cefb7e0-ad49-4cbb-9475-b83c4d90ecb7" />
+SELECT AVG(c.value) AS avg_coffee_production
+FROM coffee c
+     JOIN honey h ON c.year = h.year
+WHERE h.value > 1000000
 
+```
 
-## *Query 9* 
+```
+</SQL>
 
+Output:
 
-<img width="568" height="456" alt="Captura de tela 2026-06-11 193814" src="https://github.com/user-attachments/assets/9110a73e-6480-4559-a45e-df272336ab52" />
+  avg_coffee_production
+1 5.87062404870624
 
-##
-
-<img width="464" height="472" alt="Captura de tela 2026-06-11 193844" src="https://github.com/user-attachments/assets/731d2300-7d72-4fba-bab0-68b982940829" />
-<img width="494" height="472" alt="Captura de tela 2026-06-11 193857" src="https://github.com/user-attachments/assets/12097083-a5f2-47f6-8fb3-d00431c0860c" />
-
-## *Query 10* 
-<div class="galeria-linha" align ='left'>  
-<img width="519" height="155" alt="Captura de tela 2026-06-11 194007" src="https://github.com/user-attachments/assets/8c7be49e-fa80-4148-9718-5be8d23a4f4b" />
-
-##
-
-<img width="246" height="74" alt="Captura de tela 2026-06-11 194027" slign='left'  src="https://github.com/user-attachments/assets/cc35b1fc-ebad-4c70-a51b-b8cf2a3cc6f0" />
-<div/>
+```
 
 ## *Function to Update The DataBase*
 
