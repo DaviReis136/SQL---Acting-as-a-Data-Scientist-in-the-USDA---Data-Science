@@ -199,10 +199,11 @@ Output:
 
 ```
 </SQL>
-SELECT DISTINCT State_ANSI 
-FROM Cheese 
-WHERE State_ANSI NOT IN (SELECT State_ANSI FROM State)
-```
+
+SELECT Year,
+       Sum(Value) AS Total
+FROM coffee
+GROUP BY Year
 
 ```
 </SQL>
