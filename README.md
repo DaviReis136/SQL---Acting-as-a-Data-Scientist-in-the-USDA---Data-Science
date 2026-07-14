@@ -6,13 +6,13 @@ The USDA maintains several datasets, including milk production, cheese productio
 
 Throughout this project, I received the following requests:
 
-> 1. Calculate the total milk production for 2023 to support the USDA annual report.
+> 1. Calculate the total milk production for 2023 to support the USDA annual report. And make predictions for three years after the last one
 
 > 2. Identify the states whose cheese production exceeded 100 million pounds in April 2023 so that the Cheese Department could focus its marketing efforts on those regions.
 
-> 3. Analyze coffee production trends and determine the total coffee production for the year 2011.
+> 3. Analyze coffee production trends and determine the total coffee production for the year 2011. and make predictions for three years after the last one
 
-> 4. Calculate the average honey production for 2022 in preparation for a meeting with the Honey Council.
+> 4. Calculate the average honey production for 2022 in preparation for a meeting with the Honey Council. And make a predition for the year 2023 and 2030.
 
 > 5. Generate a list of all states and their corresponding ANSI codes for the State Relations Team.
 
@@ -154,6 +154,158 @@ Output:
 
 ```
 
+```
+</>Python
+
+import pandas as pd
+from pandasql import sqldf as pysqldf
+import numpy as np
+import ast as at
+import pprint
+import functools 
+import matplotlib
+import pandasql
+import csv
+
+```
+
+```
+</>Python
+
+total = pd.read_csv ('year_total_milk.csv')
+
+```
+
+```
+</>Python
+
+from IPython.display import display
+from sklearn import datasets
+import numpy as nm
+import pandas as pd
+import matplotlib.pyplot as plt
+import pandasql as ps
+from pandasql import *
+from sqlalchemy import text
+from sqlalchemy import sql
+from sqlalchemy import create_engine
+
+```
+
+```
+</>Python
+
+list(total.columns)
+
+```
+
+```
+</>Python
+
+Output:
+
+['Year', 'Total']
+
+```
+
+```
+</>Python
+
+dados = total
+
+print(dados)
+
+```
+
+```
+</>Python
+
+Output:
+
+| No. | Year |  Total |
+| --: | ---: | -----: |
+|   1 | 1924 |  12365 |
+|   2 | 1925 |  12480 |
+|   3 | 1926 |  10804 |
+|   4 | 1927 |   8996 |
+|   5 | 1928 |   9059 |
+|   ⋮ |    ⋮ |      ⋮ |
+|  96 | 2019 | 100435 |
+|  97 | 2020 | 102613 |
+|  98 | 2021 |  95890 |
+|  99 | 2022 | 100845 |
+| 100 | 2023 |  35947 |
+
+```
+
+```
+</>Python
+
+from sklearn.linear_model import LinearRegression
+import matplotlib.pyplot as plt
+import numpy as np
+
+# X = years
+X = dados[["Year"]]
+
+# y = number of tweets
+y = dados["Total"]
+
+# Fit the model
+modelo = LinearRegression()
+modelo.fit(X, y)
+
+# Predicted values for the existing years
+dados["predicted"] = modelo.predict(X)
+
+# Future years
+future_years = np.array([[2024], [2025], [2026]])
+predictions = modelo.predict(future_years)
+
+# Combine historical and future years to draw a single regression line
+all_years = np.vstack([X.values, future_years])
+regression_line = modelo.predict(all_years)
+
+# Plot
+plt.figure(figsize=(10, 6))
+
+# Actual data
+plt.scatter(X, y, color="blue", s=60, label="Actual Data")
+
+# Regression line (historical + future)
+plt.plot(all_years, regression_line, color="red", linewidth=2, label="Linear Regression")
+
+# Predicted points
+plt.scatter(
+    future_years,
+    predictions,
+    color="green",
+    marker="X",
+    s=120,
+    label="Predictions"
+)
+
+# Display the predicted value next to each point
+for year, value in zip(future_years.flatten(), predictions):
+    plt.text(year, value, f"{value:.0f}", fontsize=10,
+             ha="left", va="bottom")
+
+plt.xlabel("Year")
+plt.ylabel("total by year")
+plt.title("Linear Regression and total Predictions [milk]")
+plt.grid(True)
+plt.legend()
+
+plt.show()
+
+print("Predictions:")
+for year, value in zip(future_years.flatten(), predictions):
+    print(f"{year}: {value:.0f} total by year")
+
+```
+
+<img width="983" height="590" alt="image" src="https://github.com/user-attachments/assets/1a598961-a094-4f0d-a00a-0c855d293c96" />
+
 ##  *Query 2*
 
 ```
@@ -288,6 +440,210 @@ Output:
 
 ```
 
+```
+</>Python
+
+import pandas as pd
+from pandasql import sqldf as pysqldf
+import numpy as np
+import ast as at
+import pprint
+import functools 
+import matplotlib
+import pandasql
+import csv
+
+```
+
+```
+</>Python
+
+total = pd.read_csv ('year_total_coffe.csv')
+
+```
+
+```
+</>Python
+
+from IPython.display import display
+from sklearn import datasets
+import numpy as nm
+import pandas as pd
+import matplotlib.pyplot as plt
+import pandasql as ps
+from pandasql import *
+from sqlalchemy import text
+from sqlalchemy import sql
+from sqlalchemy import create_engine
+
+```
+
+```
+</>Python
+list(total.columns)
+```
+
+```
+</>Python
+
+Output:
+['Year', 'Total']
+
+```
+
+```
+</>Python
+
+dados = total
+
+print(dados)
+
+```
+
+```
+</>Python
+
+Output:
+
+| No. | Year | Total |
+| --: | ---: | ----: |
+|   1 | 1946 |     8 |
+|   2 | 1947 |     8 |
+|   3 | 1948 |     7 |
+|   4 | 1949 |     5 |
+|   5 | 1950 |     9 |
+|   6 | 1951 |     9 |
+|   7 | 1952 |    10 |
+|   8 | 1953 |    10 |
+|   9 | 1954 |    12 |
+|  10 | 1955 |    10 |
+|  11 | 1956 |    11 |
+|  12 | 1957 |    18 |
+|  13 | 1958 |    10 |
+|  14 | 1959 |    12 |
+|  15 | 1960 |    13 |
+|  16 | 1961 |     8 |
+|  17 | 1962 |    13 |
+|  18 | 1963 |     6 |
+|  19 | 1964 |     9 |
+|  20 | 1965 |     7 |
+|  21 | 1966 |     8 |
+|  22 | 1967 |     5 |
+|  23 | 1968 |     5 |
+|  24 | 1969 |     4 |
+|  25 | 1970 |     4 |
+|  26 | 1971 |     2 |
+|  27 | 1972 |     3 |
+|  28 | 1973 |     3 |
+|  29 | 1974 |     1 |
+|  30 | 1975 |     1 |
+|  31 | 1976 |     2 |
+|  32 | 1977 |     2 |
+|  33 | 1978 |     1 |
+|  34 | 1979 |     2 |
+|  35 | 1980 |     1 |
+|  36 | 1981 |     2 |
+|  37 | 1982 |    10 |
+|  38 | 1983 |     2 |
+|  39 | 1984 |     1 |
+|  40 | 1985 |     1 |
+|  41 | 1986 |     3 |
+|  42 | 1987 |     1 |
+|  43 | 1988 |     2 |
+|  44 | 1989 |     3 |
+|  45 | 1990 |     2 |
+|  46 | 1991 |     2 |
+|  47 | 1992 |     2 |
+|  48 | 1993 |     2 |
+|  49 | 1994 |     4 |
+|  50 | 1995 |     5 |
+|  51 | 1996 |     6 |
+|  52 | 1997 |     9 |
+|  53 | 1998 |     9 |
+|  54 | 1999 |    10 |
+|  55 | 2000 |     8 |
+|  56 | 2001 |     8 |
+|  57 | 2002 |     7 |
+|  58 | 2003 |     8 |
+|  59 | 2004 |     5 |
+
+```
+
+```
+</>Python
+
+from sklearn.linear_model import LinearRegression
+import matplotlib.pyplot as plt
+import numpy as np
+
+# X = years
+X = dados[["Year"]]
+
+# y = number of tweets
+y = dados["Total"]
+
+# Fit the model
+modelo = LinearRegression()
+modelo.fit(X, y)
+
+# Predicted values for the existing years
+dados["predicted"] = modelo.predict(X)
+
+# Future years
+future_years = np.array([[2006], [2007], [2008]])
+predictions = modelo.predict(future_years)
+
+# Combine historical and future years to draw a single regression line
+all_years = np.vstack([X.values, future_years])
+regression_line = modelo.predict(all_years)
+
+# Plot
+plt.figure(figsize=(10, 6))
+
+# Actual data
+plt.scatter(X, y, color="blue", s=60, label="Actual Data")
+
+# Regression line (historical + future)
+plt.plot(all_years, regression_line, color="red", linewidth=2, label="Linear Regression")
+
+# Predicted points
+plt.scatter(
+    future_years,
+    predictions,
+    color="green",
+    marker="X",
+    s=120,
+    label="Predictions"
+)
+
+# Display the predicted value next to each point
+for year, value in zip(future_years.flatten(), predictions):
+    plt.text(year, value, f"{value:.0f}", fontsize=10,
+             ha="left", va="bottom")
+
+plt.xlabel("Year")
+plt.ylabel("total by year")
+plt.title("Linear Regression and total Predictions [coffe]")
+plt.grid(True)
+plt.legend()
+
+plt.show()
+
+print("Predictions:")
+for year, value in zip(future_years.flatten(), predictions):
+    print(f"{year}: {value:.0f} total by year")
+
+```
+
+```
+</>Python
+
+Output:
+
+```
+
+<img width="881" height="595" alt="image" src="https://github.com/user-attachments/assets/ae0bb803-24c4-4f1b-a548-0f55519e45d3" />
+
 ##  *Query 4* 
 
 ```
@@ -345,6 +701,188 @@ Output:
 | 36 | 2022 |  140.25 |
 
 ```
+
+```
+</>Python
+
+import pandas as pd
+from pandasql import sqldf as pysqldf
+import numpy as np
+import ast as at
+import pprint
+import functools 
+import matplotlib
+import pandasql
+import csv
+
+```
+
+```
+</>Python
+
+average = pd.read_csv ('Year,Average.csv')
+
+```
+
+```
+</>Python
+
+from IPython.display import display
+from sklearn import datasets
+import numpy as nm
+import pandas as pd
+import matplotlib.pyplot as plt
+import pandasql as ps
+from pandasql import *
+from sqlalchemy import text
+from sqlalchemy import sql
+from sqlalchemy import create_engine
+
+```
+
+```
+</>Python
+
+list(average.columns)
+
+```
+
+```
+</>Python
+
+['Year', 'Average']
+
+```
+
+```
+</>Python
+
+dados = average
+
+print(dados)
+
+```
+
+```
+</>Python
+
+Outpút:
+
+| No. | Year | Average |
+| --: | ---: | ------: |
+|   1 | 1987 |  143.43 |
+|   2 | 1988 |  108.45 |
+|   3 | 1989 |  176.67 |
+|   4 | 1990 |  146.16 |
+|   5 | 1991 |  144.09 |
+|   6 | 1992 |  145.76 |
+|   7 | 1993 |  209.27 |
+|   8 | 1994 |  202.33 |
+|   9 | 1995 |  171.82 |
+|  10 | 1996 |  191.24 |
+|  11 | 1997 |  168.07 |
+|  12 | 1998 |  181.14 |
+|  13 | 1999 |  184.18 |
+|  14 | 2000 |  193.55 |
+|  15 | 2001 |  198.44 |
+|  16 | 2002 |  223.80 |
+|  17 | 2003 |  183.64 |
+|  18 | 2004 |  187.50 |
+|  19 | 2005 |  197.86 |
+|  20 | 2006 |  217.71 |
+|  21 | 2007 |  212.83 |
+|  22 | 2008 |  204.48 |
+|  23 | 2009 |  202.66 |
+|  24 | 2010 |  176.51 |
+|  25 | 2011 |  180.02 |
+|  26 | 2012 |  182.80 |
+|  27 | 2013 |  136.70 |
+|  28 | 2014 |  216.80 |
+|  29 | 2015 |  177.73 |
+|  30 | 2016 |  179.88 |
+|  31 | 2017 |  133.95 |
+|  32 | 2018 |  165.49 |
+|  33 | 2019 |  185.83 |
+|  34 | 2020 |  226.68 |
+|  35 | 2021 |  175.56 |
+|  36 | 2022 |  140.25 |
+
+```
+
+```
+</>Python
+
+from sklearn.linear_model import LinearRegression
+import matplotlib.pyplot as plt
+import numpy as np
+
+# X = years
+X = dados[["Year"]]
+
+# y = number of tweets
+y = dados["Average"]
+
+# Fit the model
+modelo = LinearRegression()
+modelo.fit(X, y)
+
+# Predicted values for the existing years
+dados["predicted"] = modelo.predict(X)
+
+# Future years
+future_years = np.array([[2023], [2030]])
+predictions = modelo.predict(future_years)
+
+# Combine historical and future years to draw a single regression line
+all_years = np.vstack([X.values, future_years])
+regression_line = modelo.predict(all_years)
+
+# Plot
+plt.figure(figsize=(10, 6))
+
+# Actual data
+plt.scatter(X, y, color="blue", s=60, label="Actual Data")
+
+# Regression line (historical + future)
+plt.plot(all_years, regression_line, color="red", linewidth=2, label="Linear Regression")
+
+# Predicted points
+plt.scatter(
+    future_years,
+    predictions,
+    color="green",
+    marker="X",
+    s=120,
+    label="Predictions"
+)
+
+# Display the predicted value next to each point
+for year, value in zip(future_years.flatten(), predictions):
+    plt.text(year, value, f"{value:.0f}", fontsize=10,
+             ha="left", va="bottom")
+
+plt.xlabel("Year")
+plt.ylabel("average by year")
+plt.title("Linear Regression and average Predictions [honey]")
+plt.grid(True)
+plt.legend()
+
+plt.show()
+
+print("Predictions:")
+for year, value in zip(future_years.flatten(), predictions):
+    print(f"{year}: {value:.0f} average by year")
+
+```
+
+```
+</>Python
+
+Output:
+
+```
+
+
 
 ## *Query 5*
 
