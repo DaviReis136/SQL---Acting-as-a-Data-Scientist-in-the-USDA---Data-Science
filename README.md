@@ -30,7 +30,7 @@ Throughout this project, I received the following requests:
 
 This project simulates <ins>real-world Data Science responsibilities</ins>, where business stakeholders frequently request specific analyses and expect accurate, data-driven answers to support organizational goals.
 
-<ins>Through these analyses, I supported decision-making processes by transforming raw agricultural data into actionable insights. The project strengthened my ability to work with relational databases, write complex SQL queries, perform data validation, identify trends and anomalies, and communicate results to business stakeholders. This experience reflects the day-to-day responsibilities of a Data Scientist working with real-world agricultural production data at the USDA.</ins>
+<ins>Through these analyses, I supported decision-making processes by transforming raw agricultural data into actionable insights. The project strengthened my ability to work with relational databases, write complex SQL queries, perform data validation, identify trends and anomalies, make predictions and communicate results to business stakeholders. This experience reflects the day-to-day responsibilities of a Data Scientist working with real-world agricultural production data at the USDA.</ins>
 
 ## *Query 1* 
 
