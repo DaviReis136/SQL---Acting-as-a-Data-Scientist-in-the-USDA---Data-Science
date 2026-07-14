@@ -882,7 +882,7 @@ Output:
 
 ```
 
-
+<img width="701" height="495" alt="image" src="https://github.com/user-attachments/assets/c6c2242b-f2df-4b9c-87cf-644234fcc18f" />
 
 ## *Query 5*
 
@@ -1173,7 +1173,14 @@ Output:
 
 ## *Function to Update The DataBase*
 
-<img width="940" height="460" alt="Function_to_Update_DataBase" src="https://github.com/user-attachments/assets/205ce7cd-bf80-4cae-b47a-c80b37744326" />
+```
+
+</> SQL
+
+UPDATE (Name_Table)
+SET (name_column) = REPLACE(name_column,'.','')
+
+```
 
 + I used this function to remove commas to perform calculations from the database.
 
