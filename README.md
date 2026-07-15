@@ -30,7 +30,7 @@ Throughout this project, I received the following requests:
 
 > 10. Determine the average coffee production for all years in which honey production exceeded one million units, supporting comparative analysis between agricultural commodities.
 
-<ins>To complete these requests:</ins>, I used SQL techniques including filtering with WHERE clauses, aggregate functions such as SUM and AVG, GROUP BY operations, subqueries, and JOINs. I also applied linear regression techniques to analyze trends and generate predictive insights from the data. These analyses allowed me to transform raw agricultural data into actionable insights that support reporting, strategic planning, and operational decision-making within the USDA.
+<ins>To complete these requests:</ins> I used SQL techniques including filtering with WHERE clauses, aggregate functions such as SUM and AVG, GROUP BY operations, subqueries, and JOINs. I also applied linear regression techniques to analyze trends and generate predictive insights from the data. These analyses allowed me to transform raw agricultural data into actionable insights that support reporting, strategic planning, and operational decision-making within the USDA.
 
 This project simulates <ins>real-world Data Science responsibilities</ins>, where business stakeholders frequently request specific analyses and expect accurate, data-driven answers to support organizational goals.
 
