@@ -1216,11 +1216,8 @@ WHERE cheese.State_ANSI = yougurt.State_ANSI AND
 ```
 
 ```
-</SQL>
 
 Output:
-
-Aqui está a tabela organizada:
 
 | Nº | Yogurt_Value | Cheese_Value | Yogurt_State_ANSI | Cheese_State_ANSI | Yogurt_Year | Cheese_Year |   Invoicing |
 | -: | -----------: | -----------: | ----------------: | ----------------: | ----------: | ----------: | ----------: |
