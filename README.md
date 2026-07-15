@@ -1,55 +1,231 @@
-# **__Capstone Project – Acting as a Data Scientist at the USDA__**
+# 🌾 Capstone Project – Acting as a Data Scientist at the USDA
 
-<img width="1774" height="887" alt="image" src="https://github.com/user-attachments/assets/9b5204bc-666e-44e6-a871-3a079c79651f" />
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/9b5204bc-666e-44e6-a871-3a079c79651f" alt="USDA Banner" width="100%">
+</p>
 
-# Resume
+<p align="center">
 
-In this Capstone Project, I assume the role of a Data Scientist at the`USDA (United States Department of Agriculture)`. My responsibility is to <ins>analyze agricultural productions data</ins> and <ins>provide insights that support decision-making</ins> across multiple departments.
+![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white)
+![SQL](https://img.shields.io/badge/SQL-4479A1?style=for-the-badge&logo=mysql&logoColor=white)
+![Pandas](https://img.shields.io/badge/Pandas-150458?style=for-the-badge&logo=pandas&logoColor=white)
+![Scikit-Learn](https://img.shields.io/badge/Scikit--Learn-F7931E?style=for-the-badge&logo=scikitlearn&logoColor=white)
+![Matplotlib](https://img.shields.io/badge/Matplotlib-11557C?style=for-the-badge)
+![Machine Learning](https://img.shields.io/badge/Machine%20Learning-FF6F00?style=for-the-badge)
+![USDA](https://img.shields.io/badge/USDA-Agricultural%20Data-green?style=for-the-badge)
 
-The USDA maintains several datasets, including milk production, cheese production, coffee production, honey production, yogurt production, and a state reference table containing state names and ANSI codes. Using <ins>SQL</ins>, I answer business questions from managers and stakeholders by <ins>extracting, analyzing, predictions and interpreting data</ins>.
+</p>
 
-Throughout this project, I received the following requests:
+---
 
-> 1. Calculate the total milk production for 2023 to support the USDA annual report. And make predictions for three years after the last one
+# 📑 Table of Contents
 
-> 2. Identify the states whose cheese production exceeded 100 million pounds in April 2023 so that the Cheese Department could focus its marketing efforts on those regions.
+- Executive Summary
+- Business Scenario
+- Project Objectives
+- Business Questions
+- Technical Skills Demonstrated
+- SQL Queries Overview
 
-> 3. Analyze coffee production trends and determine the total coffee production for the year 2011. and make predictions for three years after the last one
+---
 
-> 4. Calculate the average honey production for 2022 in preparation for a meeting with the Honey Council. And make a predition for the year 2023 and 2030.
+# 📖 Executive Summary
 
-> 5. Generate a list of all states and their corresponding ANSI codes for the State Relations Team.
+In this **Capstone Project**, I assume the role of a **Data Scientist** working for the **United States Department of Agriculture (USDA)**.
 
-> 6. Create a cross-commodity report listing all states and their cheese production values, including states that did not report cheese production in April 2023, and determine the production value for New Jersey.
+My primary responsibility is to **analyze agricultural production data**, uncover meaningful insights, and support **data-driven decision-making** across multiple departments.
 
-> 7. Calculate the total yogurt production in 2022 for states that also had cheese production data available in 2023 to support planning by the Dairy Division.
+The USDA manages several agricultural datasets covering:
 
-> 8. Identify all states present in the state_lookup table that were missing from the milk_production dataset in 2023 in order to detect gaps or inconsistencies in reporting.
+- 🥛 Milk Production
+- 🧀 Cheese Production
+- ☕ Coffee Production
+- 🍯 Honey Production
+- 🥣 Yogurt Production
+- 🗺️ State Reference Data (ANSI Codes)
 
-> 9. Produce a complete list of states and their cheese production values, including states with no reported production, and verify whether Delaware produced any cheese in April 2023.
+Using **SQL**, **Python**, and **Machine Learning**, I answer real business questions submitted by managers and stakeholders by:
 
-> 10. Determine the average coffee production for all years in which honey production exceeded one million units, supporting comparative analysis between agricultural commodities.
+- **Extracting** data
+- **Cleaning and validating** information
+- **Performing exploratory analysis**
+- **Identifying trends and anomalies**
+- **Building predictive models**
+- **Generating actionable business insights**
 
-<ins>To complete these requests:</ins> I used SQL techniques including filtering with WHERE clauses, aggregate functions such as SUM and AVG, GROUP BY operations, subqueries, and JOINs. I also applied linear regression techniques to analyze trends and generate predictive insights from the data. These analyses allowed me to transform raw agricultural data into actionable insights that support reporting, strategic planning, and operational decision-making within the USDA.
+This project simulates a real-world business environment where stakeholders rely on accurate analyses to support operational planning and strategic decision-making.
 
-This project simulates <ins>real-world Data Science responsibilities</ins>, where business stakeholders frequently request specific analyses and expect accurate, data-driven answers to support organizational goals.
+---
 
-<ins>Through these analyses, I supported decision-making processes by transforming raw agricultural data into actionable insights. The project strengthened my ability to work with relational databases, write complex SQL queries, perform data validation, identify trends and anomalies, make predictions and communicate results to business stakeholders. This experience reflects the day-to-day responsibilities of a Data Scientist working with real-world agricultural production data at the USDA.</ins>
+# 🎯 Business Scenario
 
-### Queries and Analytical Results (USDA Data Science)
+As a **Data Scientist** at the USDA, I received several analytical requests from different departments.
 
-| Role | What they do |
-| :--- | :--- |
-| **Query 1** | **Milk Production Analysis:** `SELECT Year, Sum(Value) AS Total FROM Milk...`<br><br>Calculates total milk production and applies linear regression to predict future trends (2024–2026) using Python's Scikit-Learn. |
-| **Query 2** | **Cheese Department Tracking:** `SELECT st.State, v.Value... WHERE Value > 100000000...`<br><br>Identifies high-producing states exceeding 100 million pounds in April 2023 for targeted marketing efforts. |
-| **Query 3** | **Coffee Trend Analysis:** `SELECT Year, Sum(Value) AS Total FROM coffee...`<br><br>Evaluates agricultural trends up to 2011 and leverages machine learning models for post-project forecasting. |
-| **Query 4** | **Honey Council Reporting:** `SELECT Year, ROUND(AVG(Value), 2)...`<br><br>Computes the historical average honey production for 2022 and maps predictive targets for 2023 and 2030. |
-| **Query 5** | **State Reference Mapping:** `SELECT * FROM State`<br><br>Serves as the data cornerstone containing state names and ANSI codes to power structural relational `JOIN` operations. |
-| **Query 6** | **Cross-Commodity Cheese Report:** `SELECT st.State, v.Value... LEFT JOIN State st...`<br><br>Lists all states alongside their specific production metrics, making sure to track zero-reporting zones like New Jersey. |
-| **Query 7** | **Dairy Division Strategy:** `SELECT yougurt.Value..., cheese.Value... FROM yougurt, cheese...`<br><br>Correlates 2022 yogurt data with 2023 cheese data via subqueries to refine macro supply chain strategies. |
-| **Query 8** | **Reporting Gap Detection:** `SELECT sl.state FROM state sl LEFT JOIN milk mp...`<br><br>Executes an anti-join logic to cleanly highlight reporting inconsistencies or missing records in the 2023 milk datasets. |
-| **Query 9** | **Validator Evaluation Matrix:** `SELECT st.State, v.Value, CASE WHEN...`<br><br>Implements complex conditional statements (`CASE WHEN`) to validate reporting status and filter Delaware's cheese output. |
-| **Query 10** | **Comparative Commodity Study:** `SELECT AVG(c.value) AS avg_coffee_production...`<br><br>Cross-references multi-commodity thresholds, checking average coffee metrics during peak honey production periods. |
+Each request required writing SQL queries, validating data quality, performing statistical analyses, and, whenever appropriate, applying **Linear Regression** models to forecast future agricultural production.
+
+The ultimate objective was to transform raw agricultural datasets into valuable insights that could support evidence-based decision-making.
+
+---
+
+# 📋 Business Questions
+
+During this project, I completed the following business requests:
+
+### **1. Milk Production Analysis**
+
+Calculate the **total milk production for 2023** to support the USDA annual report and generate production forecasts for the next **three years** using **Linear Regression**.
+
+---
+
+### **2. Cheese Production Analysis**
+
+Identify all states whose cheese production exceeded **100 million pounds** in **April 2023** to support targeted marketing campaigns by the Cheese Department.
+
+---
+
+### **3. Coffee Production Analysis**
+
+Analyze historical coffee production trends, calculate the **total production for 2011**, and forecast production for the following three years.
+
+---
+
+### **4. Honey Production Analysis**
+
+Calculate the **average honey production for 2022** and predict expected production levels for **2023** and **2030** using **Machine Learning**.
+
+---
+
+### **5. State Reference Table**
+
+Generate a complete list of all U.S. states along with their corresponding **ANSI codes** for the State Relations Team.
+
+---
+
+### **6. Cross-Commodity Report**
+
+Produce a report containing every state and its cheese production values, including states with **no reported production** during **April 2023**, and verify New Jersey's production.
+
+---
+
+### **7. Dairy Division Analysis**
+
+Calculate the **total yogurt production in 2022** for states that also reported cheese production in **2023**.
+
+---
+
+### **8. Data Quality Validation**
+
+Identify states present in the `state_lookup` table that were missing from the `milk_production` dataset for **2023**, highlighting potential reporting inconsistencies.
+
+---
+
+### **9. Cheese Production Validation**
+
+Generate a complete list of states, validate production records using conditional logic (`CASE WHEN`), and verify whether **Delaware** reported cheese production during **April 2023**.
+
+---
+
+### **10. Comparative Commodity Analysis**
+
+Calculate the **average coffee production** for every year in which honey production exceeded **one million units**, supporting cross-commodity comparisons.
+
+---
+
+# 🛠 Technical Skills Demonstrated
+
+Throughout this project, I applied several SQL and Data Science techniques, including:
+
+- **Filtering** using `WHERE`
+- **Aggregate Functions** (`SUM`, `AVG`, `COUNT`)
+- **Sorting** with `ORDER BY`
+- **Grouping** using `GROUP BY`
+- **INNER JOIN`
+- **LEFT JOIN`
+- **Subqueries**
+- **Conditional Logic** (`CASE WHEN`)
+- **Data Validation**
+- **Exploratory Data Analysis (EDA)**
+- **Linear Regression**
+- **Predictive Analytics**
+- **Data Visualization using Python**
+
+These techniques enabled the transformation of raw agricultural production data into actionable business insights that support reporting, strategic planning, and operational decision-making within the USDA.
+
+---
+
+# 💼 Professional Experience Simulated
+
+This project closely mirrors the daily responsibilities of a **Data Scientist** working in a real-world organization.
+
+By completing these analyses, I strengthened my ability to:
+
+- Design complex SQL queries
+- Work with relational databases
+- Validate data quality
+- Detect trends and anomalies
+- Build predictive models using **Scikit-Learn**
+- Interpret analytical results
+- Communicate findings to non-technical stakeholders
+- Support business decisions with data-driven insights
+
+This project demonstrates practical experience in applying **SQL**, **Python**, and **Machine Learning** to solve real-world agricultural business problems.
+
+---
+
+# 📊 SQL Queries Overview
+
+| Query | Business Objective | Main Techniques |
+|:------|:-------------------|:----------------|
+| **Query 1** | Milk Production Analysis | `SUM`, `GROUP BY`, Linear Regression |
+| **Query 2** | Cheese Production Analysis | `LEFT JOIN`, `WHERE` |
+| **Query 3** | Coffee Production Trends | `SUM`, Forecasting |
+| **Query 4** | Honey Production Analysis | `AVG`, Linear Regression |
+| **Query 5** | State Reference Table | `SELECT *` |
+| **Query 6** | Cross-Commodity Report | `LEFT JOIN` |
+| **Query 7** | Dairy Division Analysis | Subqueries |
+| **Query 8** | Data Quality Validation | Anti Join (`LEFT JOIN ... IS NULL`) |
+| **Query 9** | Data Validation | `CASE WHEN` |
+| **Query 10** | Comparative Commodity Analysis | `AVG`, `JOIN` |
+
+---
+
+| Query  | Business Objective       | SQL Concepts      | Machine Learning |
+| ------ | ------------------------ | ----------------- | ---------------- |
+| 🥛 Q1  | Milk Production Analysis | `SUM`, `GROUP BY` | ✅                |
+| 🧀 Q2  | Cheese Production        | `LEFT JOIN`       | ❌                |
+| ☕ Q3   | Coffee Production        | `SUM`             | ✅                |
+| 🍯 Q4  | Honey Production         | `AVG`             | ✅                |
+| 🗺️ Q5 | State Lookup             | `SELECT`          | ❌                |
+| 📈 Q6  | Cross Commodity          | `JOIN`            | ❌                |
+| 🥣 Q7  | Yogurt Analysis          | Subquery          | ❌                |
+| 🔍 Q8  | Missing Records          | Anti Join         | ❌                |
+| ✔️ Q9  | Validation               | `CASE WHEN`       | ❌                |
+| 📊 Q10 | Commodity Comparison     | `AVG`, `JOIN`     | ❌                |
+
+📁 Project Structure
+
+USDA-Data-Science/
+│
+├── data/
+│   ├── milk.csv
+│   ├── cheese.csv
+│   ├── coffee.csv
+│   ├── honey.csv
+│   ├── yogurt.csv
+│
+├── sql/
+│   ├── Query01.sql
+│   ├── Query02.sql
+│   ├── ...
+│
+├── notebooks/
+│
+├── images/
+│
+├── README.md
+│
+└── LICENSE
+
 
 ## *Query 1* 
 
@@ -1190,25 +1366,95 @@ Output:
 
 ```
 
-## *Function to Update The DataBase*
+---
 
+# 🗄️ Database Preprocessing
+
+Before performing the SQL analyses, it was necessary to clean and standardize the datasets.
+
+Some production values contained formatting characters that prevented numerical calculations. To ensure accurate aggregations and statistical analyses, I applied the following SQL statement to remove unwanted characters from the numeric fields.
+
+### SQL Cleaning Script
+
+```sql
+UPDATE table_name
+SET column_name = REPLACE(column_name, ',', '');
 ```
 
-</> SQL
+> **Note:** This preprocessing step was applied before executing the analytical queries to ensure that all production values could be correctly interpreted as numeric data.
 
-UPDATE (Name_Table)
-SET (name_column) = REPLACE(name_column,'.','')
+---
 
-```
+# 📂 Datasets
 
-+ I used this function to remove commas to perform calculations from the database.
+The project uses official agricultural production datasets provided for the USDA Data Science Capstone Project.
 
-## *DataBase*
+| Dataset | Description |
+|:---------|:------------|
+| 🥛 **Milk Production** | Historical milk production by state and year. |
+| 🧀 **Cheese Production** | Cheese production by state, month, and year. |
+| ☕ **Coffee Production** | Annual coffee production across the United States. |
+| 🍯 **Honey Production** | Honey production statistics used for historical and predictive analyses. |
+| 🥣 **Yogurt Production** | Yogurt production by state and year. |
+| 🥚 **Egg Production** | Egg production dataset available for additional agricultural analyses. |
+| 🗺️ **State Lookup** | Reference table containing U.S. states and their corresponding ANSI codes. |
 
-https://d3c33hcgiwev3.cloudfront.net/d8zmGGSKQ5-IF7c4DXBz6Q_60a7f48eface44f59708149f249585f1_cheese_production.csv?Expires=1781305762&Signature=Ju-ikVdEF8k870d47EmwO7PxpTM1dalcxVFAqVJOHBpLSow6JkqQLpAb8PNiSW1ZpUBAbzMuWTvm3xO4Rjeu1mI0M5p4a6L8R~v1vK6XVqlqDvjnZHTj42tedFrFAE0q8KFitN3~5JqKPAdxeNKDj7LIM0WgwDvRJvDqgr6m0KM_&Key-Pair-Id=APKAJLTNE6QMUY6HBC5A
-https://d3c33hcgiwev3.cloudfront.net/X-LJUUv5SuyuwXCNIG7wGQ_31442ea85cab45858dc0881c6e15dbf1_honey_production.csv?Expires=1781305762&Signature=ccyYbfLX9~ZSBQKqTCEHXQ8m35UHknivqHnt7FhOmAO3aZwq0sWj5fYzgbI4RnUDUXYaYfiEr4jnek9My99c4rhtuuu7BL9iCX~uEps8OgM95Bv8ZOz7n4a7nPIvpfzQUHjlcUDKX6O8h4FVJNq1OuYZsSkGGq-m7KLTGp~J6Og_&Key-Pair-Id=APKAJLTNE6QMUY6HBC5A
-https://d3c33hcgiwev3.cloudfront.net/hqFfV_kBR8ikF2T4p-X9Iw_3c34b5199b614bb19e7d56936872dff1_milk_production.csv?Expires=1781305762&Signature=EglXI32xcLzlUIoNbBGKMPeifFaddOErXnq~bWnntmhljt9NBN~q1~GwhWUnSqM98CeFMc4T5i6Fc5afkve8-ly0dAp0QTX3GGfv8gUEOPnw0IED9E~7LALcfcUV70AzA0H9FD~rflmyjTHfATIdnlc4AiA-1W9NmgtZHPoImv8_&Key-Pair-Id=APKAJLTNE6QMUY6HBC5A
-https://d3c33hcgiwev3.cloudfront.net/B7_yyiTsRnCz1j19KE-_xA_4c4db332472344238d67147334902df1_coffee_production.csv?Expires=1781305762&Signature=jlrGGeZErNIv132VA6cafsf9vn8hkvfuhA~438rjys4bEMZ9eI-Dc2rrNTgLDPlE4y6SZloebjQi3Xu1WwSbRvk3KjBdpA2lhjtlEjnVVAydmAOylI-vA6HorxpolzGcnGSHxEjGOBAYknrIdJMkemQ5HI89Y3ROcVV6~KriSZc_&Key-Pair-Id=APKAJLTNE6QMUY6HBC5A
-https://d3c33hcgiwev3.cloudfront.net/DXHlHzfeTiWg6EH8gsGf3g_500a03b1b95f41518a73c1368c767cf1_egg_production.csv?Expires=1781305762&Signature=aNaGlxuACZ~9bw969yuMyInRHhMFIC5IZPFh~Miti1uDFUTUCye2Tz6v5Wg2r9m2ETmKF3oSYxmGCCUR0B0axB9MNqh~32~lsemOp0jRukXzeQj1L8myI7VlCDaxMpVm55zgyaAIFTC709xll0KvRfcQOr9PVREItLZqBG7-m9w_&Key-Pair-Id=APKAJLTNE6QMUY6HBC5A
-https://d3c33hcgiwev3.cloudfront.net/19-hx8-BR_-X1DPaV5IPvw_13da3a9d4c244bcb87a24f7367e492f1_state_lookup.csv?Expires=1781305762&Signature=fDFvwOOLsZkD75~JXChTkH~HhtjamCOflZQ7YXI4yLvDoieuHMVLmAWu~1rwyQ32~TFR4~VUuxLO0XEfq4BcaI~GWtyN8Ew7OJo~1wc4hCFGrTRiGaAESF0n9f79NVNXnXn8v1T0t54ov2~~TOEtQZUs8~G8TcJsoiLt17UOBVw_&Key-Pair-Id=APKAJLTNE6QMUY6HBC5A
-https://d3c33hcgiwev3.cloudfront.net/2oDLa7X0QnCuYmqLFs5bbg_4124f56804084ec884ef97089ed52ef1_yogurt_production.csv?Expires=1781305762&Signature=HLmOMfsmi08gVp111Jf0z8HtDR4QZa8AhvrYKeAwPC3a1bZ6eA71d9z-o1hD~aWiExpz5d6ftS2wx8bRYrBM2LEcerd-fvCkFpfLjCUYB9G0NKmhOZbRBbDMYehQ7AoJ4RiPsnVMgra6x6VNZghK5CA3rRgXh5o6KXZwrrkPinw_&Key-Pair-Id=APKAJLTNE6QMUY6HBC5A
+---
+
+# 📥 Dataset Sources
+
+### 🥛 Milk Production
+
+https://d3c33hcgiwev3.cloudfront.net/hqFfV_kBR8ikF2T4p-X9Iw_3c34b5199b614bb19e7d56936872dff1_milk_production.csv
+
+---
+
+### 🧀 Cheese Production
+
+https://d3c33hcgiwev3.cloudfront.net/d8zmGGSKQ5-IF7c4DXBz6Q_60a7f48eface44f59708149f249585f1_cheese_production.csv
+
+---
+
+### ☕ Coffee Production
+
+https://d3c33hcgiwev3.cloudfront.net/B7_yyiTsRnCz1j19KE-_xA_4c4db332472344238d67147334902df1_coffee_production.csv
+
+---
+
+### 🍯 Honey Production
+
+https://d3c33hcgiwev3.cloudfront.net/X-LJUUv5SuyuwXCNIG7wGQ_31442ea85cab45858dc0881c6e15dbf1_honey_production.csv
+
+---
+
+### 🥣 Yogurt Production
+
+https://d3c33hcgiwev3.cloudfront.net/2oDLa7X0QnCuYmqLFs5bbg_4124f56804084ec884ef97089ed52ef1_yogurt_production.csv
+
+---
+
+### 🥚 Egg Production
+
+https://d3c33hcgiwev3.cloudfront.net/DXHlHzfeTiWg6EH8gsGf3g_500a03b1b95f41518a73c1368c767cf1_egg_production.csv
+
+---
+
+### 🗺️ State Lookup
+
+https://d3c33hcgiwev3.cloudfront.net/19-hx8-BR_-X1DPaV5IPvw_13da3a9d4c244bcb87a24f7367e492f1_state_lookup.csv
+
+---
+
+# 📌 Data Preparation
+
+Before answering the business questions, the datasets were prepared through a series of preprocessing steps, including:
+
+- **Data cleaning**
+- **Formatting numeric values**
+- **Removing non-numeric characters**
+- **Data validation**
+- **Database normalization**
+- **Consistency checks**
+- **Preparation for SQL aggregation and Machine Learning analysis**
+
+These preprocessing steps ensured data integrity and improved the reliability of all subsequent SQL analyses and predictive models.
