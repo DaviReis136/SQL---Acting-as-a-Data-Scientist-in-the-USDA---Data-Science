@@ -1,5 +1,9 @@
 # **__Capstone Project – Acting as a Data Scientist at the USDA__**
 
+<img width="1774" height="887" alt="image" src="https://github.com/user-attachments/assets/9b5204bc-666e-44e6-a871-3a079c79651f" />
+
+# Resume
+
 In this Capstone Project, I assume the role of a Data Scientist at the`USDA (United States Department of Agriculture)`. My responsibility is to <ins>analyze agricultural production data</ins> and <ins>provide insights that support decision-making</ins> across multiple departments.
 
 The USDA maintains several datasets, including milk production, cheese production, coffee production, honey production, yogurt production, and a state reference table containing state names and ANSI codes. Using <ins>SQL</ins>, I answer business questions from managers and stakeholders by <ins>extracting, analyzing, prediction and interpreting data</ins>.
