@@ -36,6 +36,21 @@ This project simulates <ins>real-world Data Science responsibilities</ins>, wher
 
 <ins>Through these analyses, I supported decision-making processes by transforming raw agricultural data into actionable insights. The project strengthened my ability to work with relational databases, write complex SQL queries, perform data validation, identify trends and anomalies, make predictions and communicate results to business stakeholders. This experience reflects the day-to-day responsibilities of a Data Scientist working with real-world agricultural production data at the USDA.</ins>
 
+### Queries and Analytical Results (USDA Data Science)
+
+| Role | What they do |
+| :--- | :--- |
+| **Query 1** | **Milk Production Analysis:** `SELECT Year, Sum(Value) AS Total FROM Milk...`<br><br>Calculates total milk production and applies linear regression to predict future trends (2024–2026) using Python's Scikit-Learn. |
+| **Query 2** | **Cheese Department Tracking:** `SELECT st.State, v.Value... WHERE Value > 100000000...`<br><br>Identifies high-producing states exceeding 100 million pounds in April 2023 for targeted marketing efforts. |
+| **Query 3** | **Coffee Trend Analysis:** `SELECT Year, Sum(Value) AS Total FROM coffee...`<br><br>Evaluates agricultural trends up to 2011 and leverages machine learning models for post-project forecasting. |
+| **Query 4** | **Honey Council Reporting:** `SELECT Year, ROUND(AVG(Value), 2)...`<br><br>Computes the historical average honey production for 2022 and maps predictive targets for 2023 and 2030. |
+| **Query 5** | **State Reference Mapping:** `SELECT * FROM State`<br><br>Serves as the data cornerstone containing state names and ANSI codes to power structural relational `JOIN` operations. |
+| **Query 6** | **Cross-Commodity Cheese Report:** `SELECT st.State, v.Value... LEFT JOIN State st...`<br><br>Lists all states alongside their specific production metrics, making sure to track zero-reporting zones like New Jersey. |
+| **Query 7** | **Dairy Division Strategy:** `SELECT yougurt.Value..., cheese.Value... FROM yougurt, cheese...`<br><br>Correlates 2022 yogurt data with 2023 cheese data via subqueries to refine macro supply chain strategies. |
+| **Query 8** | **Reporting Gap Detection:** `SELECT sl.state FROM state sl LEFT JOIN milk mp...`<br><br>Executes an anti-join logic to cleanly highlight reporting inconsistencies or missing records in the 2023 milk datasets. |
+| **Query 9** | **Validator Evaluation Matrix:** `SELECT st.State, v.Value, CASE WHEN...`<br><br>Implements complex conditional statements (`CASE WHEN`) to validate reporting status and filter Delaware's cheese output. |
+| **Query 10** | **Comparative Commodity Study:** `SELECT AVG(c.value) AS avg_coffee_production...`<br><br>Cross-references multi-commodity thresholds, checking average coffee metrics during peak honey production periods. |
+
 ## *Query 1* 
 
 ```
